@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Features = () => {
   const features = [
     {
@@ -21,8 +19,8 @@ const Features = () => {
 
   return (
     <div className="py-24 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
             What We Do
           </h2>
@@ -31,18 +29,18 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
-              <div className="h-48 w-full">
+            <div key={index} className="overflow-hidden bg-gray-800 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+              <div className="w-full h-48">
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className="h-full w-full object-cover"
+                  className="object-cover w-full h-full"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="mb-2 text-xl font-semibold text-white">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300">

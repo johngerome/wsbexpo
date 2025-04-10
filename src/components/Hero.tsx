@@ -1,8 +1,6 @@
-import React from 'react';
-
 const Hero = () => {
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="overflow-hidden relative h-screen">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full">
         <video
@@ -10,7 +8,7 @@ const Hero = () => {
           muted
           loop
           playsInline
-          className="absolute w-full h-full object-cover"
+          className="object-cover absolute w-full h-full"
         >
           <source
             src="/hero-bg.mp4"
@@ -21,7 +19,7 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center justify-center text-center px-4"> 
+      <div className="flex relative z-10 justify-center items-center px-4 h-full text-center"> 
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 [text-shadow:_2px_2px_10px_rgb(0_0_0_/_90%)]">
             Creating Unforgettable Music Experiences
@@ -30,10 +28,10 @@ const Hero = () => {
             Premier event organizers bringing you the best in live music, concerts, and entertainment
           </p>
           <div className="space-x-4">
-            <button className="bg-purple-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition duration-300 shadow-lg hover:shadow-purple-500/30">
+            <button className="px-8 py-3 text-lg font-semibold text-white bg-purple-600 rounded-full shadow-lg transition duration-300 hover:bg-purple-700 hover:shadow-purple-500/30">
               Upcoming Events
             </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-black transition duration-300 shadow-lg">
+            <button className="px-8 py-3 text-lg font-semibold text-white bg-transparent rounded-full border-2 border-white shadow-lg transition duration-300 hover:bg-white hover:text-black">
               Book Us
             </button>
           </div>

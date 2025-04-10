@@ -13,7 +13,7 @@ const Hero = () => {
           className="absolute w-full h-full object-cover"
         >
           <source
-            src="https://cdn.coverr.co/videos/coverr-concert-lights-flash-3316/1080p.mp4"
+            src="/hero-bg.mp4"
             type="video/mp4"
           />
         </video>

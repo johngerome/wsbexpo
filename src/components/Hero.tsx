@@ -1,13 +1,32 @@
+import { useState } from 'react';
+
 const Hero = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  // Handle video loaded event
+  const handleVideoLoaded = () => {
+    setVideoLoaded(true);
+  };
+
   return (
     <div className="overflow-hidden relative h-screen">
-      {/* Video Background */}
+      {/* Video Background with Image Preload */}
       <div className="absolute inset-0 w-full h-full">
+        {/* Placeholder Image (visible until video loads) */}
+        <div 
+          className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-700 ${videoLoaded ? 'opacity-0' : 'opacity-100'}`}
+          style={{
+            backgroundImage: `url("https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")`,
+            zIndex: 1
+          }}
+        ></div>
+        
         <video
           autoPlay
           muted
           loop
           playsInline
+          onLoadedData={handleVideoLoaded}
           className="object-cover absolute w-full h-full"
         >
           <source
